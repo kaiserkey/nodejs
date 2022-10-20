@@ -1,5 +1,6 @@
 'use strict'
 
+//variables de entorno en nodejs
 function singleThread(){
     console.log('----------------------------------------------------');
     console.log('               EL PROCESO DE NODE.JS                ');

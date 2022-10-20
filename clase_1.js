@@ -1,4 +1,6 @@
 'use strict'
+
+//primer programa en nodejs
 var contador = 0;
 
 let saludo = setInterval(() => {
