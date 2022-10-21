@@ -1,7 +1,7 @@
 'use strict'
 
 const EventEmitter = require('events').EventEmitter
-module.exports = class Clock extends EventEmitter{
+module.exports = class ClockModule extends EventEmitter{
 
     mostrarHora(){
         let hora = ()=>{
