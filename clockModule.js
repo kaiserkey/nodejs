@@ -1,11 +1,9 @@
 'use strict'
 
 const EventEmitter = require('events').EventEmitter
-module.exports = class Clock{
+module.exports = class Clock extends EventEmitter{
 
     mostrarHora(){
-        let pub = new EventEmitter()
-        
         let hora = ()=>{
             let date = new Date(),
             addZero = (num)=>
@@ -25,9 +23,9 @@ module.exports = class Clock{
             console.log(msg)
         }
 
-        pub.on('tictac', ()=>{ hora() })
+        super.on('tictac', ()=>{ hora() })
 
-        setInterval( ()=>{ pub.emit('tictac') }, 1000);
+        setInterval( ()=>{ super.emit('tictac') }, 1000);
     }
 
 }
