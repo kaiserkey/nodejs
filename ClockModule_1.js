@@ -1,7 +1,6 @@
 'use strict'
 
-const EventEmitter = require('events').EventEmitter
-class ClockModule extends EventEmitter{
+class ClockModule{
 
     ClockModule(){}
 
@@ -24,10 +23,7 @@ class ClockModule extends EventEmitter{
 
             console.log(msg)
         }
-
-        super.on('tictac', ()=>{ hora() })
-
-        setInterval( ()=>{ super.emit('tictac') }, 1000);
+        setInterval( ()=>{ hora()  }, 1000);
     }
 
 }

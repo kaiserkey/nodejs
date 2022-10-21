@@ -2,8 +2,6 @@
 
 //export e import
 
-const Clock = require('./ClockModule')
+const Clock = require('./ClockModule_1')
 
-const myClock = new Clock()
-
-myClock.mostrarHora()
+Clock.mostrarHora()
