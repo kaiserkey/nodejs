@@ -1,0 +1,23 @@
+{
+  "name": "uploader",
+  "version": "0.0.1",
+  "description": "subir archivos con nodejs al servidor",
+  "main": "uploader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon uploader.js"
+  },
+  "keywords": [
+    "uploader",
+    "file",
+    "node.js",
+    "formidable",
+    "fs-extra"
+  ],
+  "author": "kaiserkey",
+  "license": "ISC",
+  "dependencies": {
+    "formidable": "^2.0.1",
+    "fs-extra": "^10.1.0"
+  }
+}
