@@ -1,6 +1,5 @@
 'use strict'
 
-const { url } = require('inspector')
 //manejo de urls con servidor http nodejs
 const http = require('http').createServer(webServer),
             path = require('path'),
