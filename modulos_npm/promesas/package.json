@@ -1,0 +1,15 @@
+{
+  "name": "promesas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "kaiserkey",
+  "license": "ISC",
+  "dependencies": {
+    "q": "^1.5.1"
+  }
+}
