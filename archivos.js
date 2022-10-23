@@ -4,7 +4,7 @@ const { writeFile } = require('fs/promises');
 const file = [];
 let content = "'use strict'";
 
-for (let i = 3; i < 40; i++) {
+for (let i = 0; i < 40; i++) {
     file.push("clase_"+i+".js");
 }
 
