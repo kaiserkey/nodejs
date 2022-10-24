@@ -36,6 +36,7 @@ function readFile(file){
                     ? defer.reject(new Error('El archivo no se pudo leer'))
                     : defer.resolve(data)
     })
+
     return defer.promise
 }
 
@@ -46,6 +47,7 @@ function writeFile(file, data){
                     ? defer.reject(new Error('El archivo no se ha podido copiar'))
                     : defer.resolve('El archivo se ha copiado con exito')
     })
+    
     return defer.promise
 }
 
