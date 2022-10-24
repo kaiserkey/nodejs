@@ -47,13 +47,13 @@ function writeFile(file, data){
                     ? defer.reject(new Error('El archivo no se ha podido copiar'))
                     : defer.resolve('El archivo se ha copiado con exito')
     })
-    
+
     return defer.promise
 }
 
 existFile(file)
-                .then(()=>{ return readFile(file) })
-                .then((dataPromise)=>{ return writeFile(newFile, dataPromise) })
-                .then((dataPromise)=>{ return  console.log(dataPromise)})
-                .fail((err)=>{return console.log(err.message)})
+                .then( ()=>{ return readFile(file) } )
+                .then( (dataPromise)=>{ return writeFile(newFile, dataPromise) } )
+                .then( (dataPromise)=>{ return  console.log(dataPromise) } )
+                .fail( (err)=>{ return console.log(err.message) } )
 
