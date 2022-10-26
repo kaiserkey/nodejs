@@ -1,0 +1,20 @@
+{
+  "name": "contador_visitas",
+  "version": "0.0.1",
+  "description": "Ejercicio de express contador de visitas",
+  "main": "contado_visitas.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon contado_visitas.js"
+  },
+  "author": "kaiserkey",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
