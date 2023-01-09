@@ -1,0 +1,42 @@
+doctype html
+
+html(lang="es-ES")
+    head
+        title= title
+        meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/style.css")
+        link(rel="shortcut icon", href="/img/coffee.ico", type="image/x-icon")
+    body
+        section 
+            table 
+                form(action="/add", method="post") 
+                    tr
+                        th Agregar Pelicula
+                        th 
+                            a(href="/home")
+                                button(type="button") Regresar 
+                    tr 
+                        td 
+                            label(for="title") Titulo  
+                        td 
+                            input(type="text" name="title" id="title")
+                    tr 
+                        td 
+                            label(for="released") Año
+                        td 
+                            input(type="text" name="released" id="released")
+                    tr 
+                        td 
+                            label(for="rating") Puntaje
+                        td 
+                            input(type="number" name="rating" id="rating")
+                    tr 
+                        td 
+                            label(for="image") Imagen
+                        td 
+                            input(type="text" name="image" id="image")
+                    tr 
+                        th(colspan="2") 
+                            input(type="submit" value="Agregar")
+                        

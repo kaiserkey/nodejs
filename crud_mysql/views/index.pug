@@ -1,0 +1,43 @@
+doctype html
+
+html(lang="es-ES")
+  head
+    title Peliculas
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="shortcut icon", href="./img/coffee.ico", type="image/x-icon")
+  body
+    section 
+      h1 Lista de Peliculas
+      -if(data.length)
+        table 
+          tr 
+            th ID
+            th Poster
+            th Titulo
+            th Año
+            th Puntaje
+            th 
+              form(action="/agregar", method="GET") 
+                button(type='submit') Agregar
+          for val in data
+            tr 
+              td= val.movie_id
+              td= val.image
+              td= val.title
+              td= val.released
+              td= val.rating
+              td 
+                form(action=`/actualizar/${val.movie_id}` method="GET") 
+                  button(type='submit') Actualizar
+              td 
+                form(action=`/eliminar/${val.movie_id}` method="POST") 
+                  button(type='button' onclick='eliminar(this)') Eliminar
+                script. 
+                  function eliminar(input){
+                    var deleteOk = confirm('¿Estas Seguro De Que Quieres Eliminar Esta Pelicula?')
+                    return deleteOk ? input.parentNode.submit() : false
+                  }
+      -else 
+        p.error No existen peliculas en la base de datos.
